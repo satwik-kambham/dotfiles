@@ -1,9 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
     [
       ./hardware-configuration.nix
+      inputs.home-manager.nixosModules.default
     ];
 
   # Bootloader.
@@ -35,14 +36,16 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "us";
-    xkbVariant = "";
+    xkb.layout = "us";
+    xkb.variant = "";
   };
 
   # Desktop managers, drivers, window managers, etc.
 
   # Enable display manager
-  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.sddm.wayland.enable = true;
+  services.xserver.displayManager.sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
 
   # Enable X11 windowing system
   services.xserver.enable = true;
@@ -117,6 +120,14 @@
     ];
     shell = pkgs.zsh;
   };
+
+  # Home Manager
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "satwik" = import ./home.nix;
+    };
+  };
   
   # Opening port for syncing spotify
   networking.firewall.allowedTCPPorts = [ 57621 ];
@@ -138,11 +149,16 @@
     gh
     curl
     wget
+    gnumake
     ripgrep
     tmux
     eza
+    nvidia-podman
     podman-tui
     podman-desktop
+
+    # Monitoring tools
+    btop
 
     # Terminal Emulators
     alacritty
@@ -157,13 +173,17 @@
     brightnessctl # Brightness controller
     hyprpicker # Color picker
     cliphist # Clipboard Manager
+    wl-clipboard
+    xfce.thunar # File Manager
+    libsForQt5.qt5.qtquickcontrols2   
+    libsForQt5.qt5.qtgraphicaleffects
   ];
 
   # Containerization
   virtualisation.podman = {
     enable = true;
-    enableNvidia = true;
   };
+  virtualisation.containers.cdi.dynamic.nvidia.enable = true;
  
   # Fonts
   fonts.packages = with pkgs; [
@@ -182,7 +202,7 @@
     
     shellAliases = {
       l = "eza -la --icons=auto";
-      update = "sudo nixos-rebuild switch";
+      update = "sudo nixos-rebuild switch --flake /etc/nixos#default";
       shx = "sudo hx";
     };
     
