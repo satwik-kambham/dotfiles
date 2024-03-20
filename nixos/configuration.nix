@@ -117,6 +117,7 @@
     packages = with pkgs; [
       firefox
       spotify
+      obsidian
     ];
     shell = pkgs.zsh;
   };
@@ -155,7 +156,6 @@
     eza
     nvidia-podman
     podman-tui
-    podman-desktop
 
     # Monitoring tools
     btop
@@ -182,8 +182,14 @@
   # Containerization
   virtualisation.podman = {
     enable = true;
+    dockerCompat = true;
   };
   virtualisation.containers.cdi.dynamic.nvidia.enable = true;
+
+  # direnv
+  programs.direnv = {
+    enable = true;
+  };
  
   # Fonts
   fonts.packages = with pkgs; [
@@ -202,6 +208,8 @@
     
     shellAliases = {
       l = "eza -la --icons=auto";
+      li = "l --git-ignore";
+      lt = "li -T";
       update = "sudo nixos-rebuild switch --flake /etc/nixos#default";
       shx = "sudo hx";
     };
@@ -213,6 +221,13 @@
       plugins = [ "git" ];
       theme = "robbyrussell";
     };
+  };
+
+  # Garbage collector
+  nix.gc = {
+    automatic = true;
+    persistent = true;
+    dates = "weekly";
   };
 
   system.stateVersion = "23.11";
