@@ -1,0 +1,183 @@
+@import "mocha.css";
+
+* {
+    color: @text;
+    border: none;
+    border-radius: 0;
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: Liberation Mono;
+    min-height: 20px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces {
+    margin-right: 8px;
+    border-radius: 10px;
+    transition: none;
+    background: @surface0;
+}
+
+#workspaces button {
+    transition: none;
+    background: transparent;
+    padding: 5px;
+    font-size: 18px;
+}
+
+#workspaces button.persistent {
+    font-size: 12px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-radius: inherit;
+    color: @surface0;
+    background: @text;
+}
+
+#cpu {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    background: @surface0;
+}
+
+#clock {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    background: @surface0;
+}
+
+#pulseaudio {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    background: @surface0;
+}
+
+#pulseaudio.muted {
+    background-color: #90b1b1;
+    color: #2a5c45;
+}
+
+#memory {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    background: @surface0;
+}
+
+#temperature {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    background: @surface0;
+}
+
+#temperature.critical {
+    background-color: @red;
+}
+
+#backlight {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    background: @surface0;
+}
+
+#battery {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    background: @surface0;
+}
+
+#battery.charging {
+    background-color: @lavender;
+    color: black;
+}
+
+#battery.warning:not(.charging) {
+    background-color: @yellow;
+    color: black;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#bluetooth {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    background: @surface0;
+}
+
+#network {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    background: @surface0;
+}
+
+
+#tray {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    background: @surface0;
+}
+
+#custom-reboot {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    background: @surface0;
+}
+
+#custom-poweroff {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    background: @surface0;
+}
+
+@keyframes blink {
+    to {
+        background-color: @text;
+        color: @mantle;
+    }
+}
