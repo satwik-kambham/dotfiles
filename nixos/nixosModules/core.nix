@@ -2,7 +2,7 @@
 
 {
   # Bootloader
-  boot.loader.systemmd-boot.enable = true;
+  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Networking
@@ -12,7 +12,7 @@
   time.timeZone = "Asia/Kolkata";
 
   # Internationalisation
-  il8n = {
+  i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
       LC_ADDRESS = "en_IN";

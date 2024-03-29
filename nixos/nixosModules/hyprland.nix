@@ -20,7 +20,7 @@
   security.polkit.enable = true;
 
   # Hyprland electron fix
-  environment.sessionVariable = {
+  environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
 
@@ -39,7 +39,7 @@
     brightnessctl # Brightness controller
     cliphist # Clipboard Manager
     wl-clipboard # Clipboard Manager
-    gnome-nautilus # File Manager
+    gnome.nautilus # File Manager
     gnome.sushi # File Previewer
     lxqt.lxqt-policykit # Auth agent
 
