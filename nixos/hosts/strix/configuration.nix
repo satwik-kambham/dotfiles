@@ -47,6 +47,10 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
 
+  programs.zsh.shellAliases = {
+    update = "sudo nixos-rebuild switch --flake .#strix";
+  };
+
   # Networking hostname
   networking.hostName = "satwik-strix";
 }

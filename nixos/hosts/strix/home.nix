@@ -30,7 +30,7 @@
     "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
     "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
   };
-  
+
   qt = {
     enable = true;
     platformTheme = "gnome";
@@ -46,7 +46,7 @@
     size = 28;
   };
 
-  home.packages = [];
+  home.packages = [ ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -63,7 +63,7 @@
     # '';
   };
 
-  home.sessionVariables = {};
+  home.sessionVariables = { };
 
   programs.home-manager.enable = true;
 }

@@ -18,6 +18,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
+      formatter.${system} = pkgs.nixpkgs-fmt;
       nixosConfigurations = {
         strix = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };

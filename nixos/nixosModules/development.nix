@@ -13,7 +13,7 @@
         hash = "sha256-dyN0RN4vswDSa2U3udhu0GsC/KVLLjAkbhK3R2z8ZHk=";
       };
     })
-    
+
     git
     difftastic
     gh
@@ -38,14 +38,14 @@
   programs.direnv = {
     enable = true;
   };
- 
+
   # Fonts
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
     monaspace
     vistafonts
   ];
-  
+
   # ZSH config
   environment.shells = with pkgs; [ zsh ];
   programs.zsh = {
@@ -53,21 +53,24 @@
     enableCompletion = true;
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
-    
+
     shellAliases = {
       l = "eza -la --icons=auto";
       li = "l --git-ignore";
       lt = "li -T";
-      update = "sudo nixos-rebuild switch --flake /etc/nixos#default";
       shx = "sudo hx";
     };
-    
+
     histSize = 10000;
-    
-    ohMyZsh = {
-      enable = true;
-      plugins = [ "git" ];
-      theme = "robbyrussell";
-    };
+
+    # ohMyZsh = {
+    #   enable = true;
+    #   plugins = [ "git" ];
+    #   theme = "robbyrussell";
+    # };
+  };
+
+  programs.starship = {
+    enable = true;
   };
 }
