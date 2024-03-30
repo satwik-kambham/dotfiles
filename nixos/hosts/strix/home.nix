@@ -57,15 +57,21 @@
     };
   };
 
-  # # Difftastic
-  # programs.git.difftastic = {
-  #   enable = true;
-  #   background = "dark";
-  # };
-
-  # programs.git.extraConfig = {
-  #   diff.external = "difft";
-  # };
+  # Git
+  programs.git = {
+    enable = true;
+    userName = "Satwik Kambham";
+    userEmail = "satwik.kambham@gmail.com";
+    lfs.enable = true;
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
+  };
+  
+  # Difftastic
+  programs.git.difftastic = {
+    enable = true;
+  };
 
   home.stateVersion = "23.11";
   programs.home-manager.enable = true;
