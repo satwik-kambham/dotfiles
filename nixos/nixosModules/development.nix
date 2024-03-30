@@ -13,6 +13,7 @@
         hash = "sha256-dyN0RN4vswDSa2U3udhu0GsC/KVLLjAkbhK3R2z8ZHk=";
       };
     })
+    marktext
 
     git
     difftastic
