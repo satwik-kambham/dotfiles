@@ -4,8 +4,6 @@
   home.username = "satwik";
   home.homeDirectory = "/home/satwik";
 
-  home.stateVersion = "23.11";
-
   # Dark Mode
   dconf.settings = {
     "org/gnome/desktop/interface" = {
@@ -13,7 +11,7 @@
     };
   };
 
-  # GTK and QT Themes
+  # GTK Theme
   gtk = {
     enable = true;
     theme = {
@@ -31,6 +29,7 @@
     "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
   };
 
+  # QT Theme
   qt = {
     enable = true;
     platformTheme = "gnome";
@@ -46,24 +45,28 @@
     size = 28;
   };
 
-  home.packages = [ ];
-
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
-  home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
+  # Starship
+  programs.starship = {
+    enable = true;
+    settings = {
+      format = "$all";
+      add_newline = false;
+      aws.disabled = true;
+      azure.disabled = true;
+      gcloud.disabled = true;
+    };
   };
 
-  home.sessionVariables = { };
+  # # Difftastic
+  # programs.git.difftastic = {
+  #   enable = true;
+  #   background = "dark";
+  # };
 
+  # programs.git.extraConfig = {
+  #   diff.external = "difft";
+  # };
+
+  home.stateVersion = "23.11";
   programs.home-manager.enable = true;
 }
