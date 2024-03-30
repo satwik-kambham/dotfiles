@@ -2,6 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    btop
+    btop # System Monitor
+    marktext # Markdown editor
+    evince # PDF reader
   ];
 }

@@ -67,7 +67,7 @@
       init.defaultBranch = "main";
     };
   };
-  
+
   # Difftastic
   programs.git.difftastic = {
     enable = true;
