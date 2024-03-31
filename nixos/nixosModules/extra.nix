@@ -5,5 +5,6 @@
     btop # System Monitor
     marktext # Markdown editor
     evince # PDF reader
+    thunderbird # Email client
   ];
 }

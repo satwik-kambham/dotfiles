@@ -25,6 +25,7 @@
     eza
     nvidia-podman
     podman-tui
+    nil
   ];
 
   # Containerization
