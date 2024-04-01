@@ -9,6 +9,7 @@
     ../../nixosModules/hardware.nix
     ../../nixosModules/nvidia.nix
     ../../nixosModules/development.nix
+    ../../nixosModules/steam.nix
     inputs.home-manager.nixosModules.default
   ];
 
