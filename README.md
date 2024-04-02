@@ -1,2 +1,3 @@
-# dotfiles
+# Dotfiles
+
 NIXOS configuration and dotfiles

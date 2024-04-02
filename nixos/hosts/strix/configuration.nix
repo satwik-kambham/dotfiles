@@ -6,6 +6,7 @@
     ../../nixosModules/core.nix
     ../../nixosModules/extra.nix
     ../../nixosModules/hyprland.nix
+    ../../nixosModules/gnome.nix
     ../../nixosModules/hardware.nix
     ../../nixosModules/nvidia.nix
     ../../nixosModules/development.nix

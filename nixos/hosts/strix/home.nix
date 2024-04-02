@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../../homeManagerModules/alacritty.nix  
+    ../../homeManagerModules/alacritty.nix
     ../../homeManagerModules/gtk.nix
     ../../homeManagerModules/qt.nix
     ../../homeManagerModules/starship.nix
@@ -10,7 +10,7 @@
     ../../homeManagerModules/helix.nix
     ../../homeManagerModules/git.nix
   ];
-  
+
   home.username = "satwik";
   home.homeDirectory = "/home/satwik";
 
