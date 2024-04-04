@@ -9,6 +9,7 @@
     ../../homeManagerModules/dunst.nix
     ../../homeManagerModules/helix.nix
     ../../homeManagerModules/git.nix
+    ../../homeManagerModules/waybar.nix
   ];
 
   home.username = "satwik";
