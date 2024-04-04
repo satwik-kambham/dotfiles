@@ -10,6 +10,7 @@
     ../../homeManagerModules/helix.nix
     ../../homeManagerModules/git.nix
     ../../homeManagerModules/waybar.nix
+    ../../homeManagerModules/hyprland.nix
   ];
 
   home.username = "satwik";
