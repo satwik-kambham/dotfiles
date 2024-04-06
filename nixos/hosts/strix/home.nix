@@ -11,6 +11,7 @@
     ../../homeManagerModules/git.nix
     ../../homeManagerModules/waybar.nix
     ../../homeManagerModules/hyprland.nix
+    ../../homeManagerModules/tmux.nix
   ];
 
   home.username = "satwik";
