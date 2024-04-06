@@ -11,6 +11,7 @@
     ../../nixosModules/nvidia.nix
     ../../nixosModules/development.nix
     ../../nixosModules/steam.nix
+    ../../nixosModules/virtualbox.nix
     inputs.home-manager.nixosModules.default
   ];
 
