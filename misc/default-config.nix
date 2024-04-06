@@ -51,6 +51,11 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  # Enable the KDE Plasma Desktop Environment.
+  # services.xserver.displayManager.sddm.enable = true;
+  # services.xserver.desktopManager.plasma5.enable = true;
+  # services.desktopManager.plasma6.enable = true; # Available on nixos-unstable
+
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
