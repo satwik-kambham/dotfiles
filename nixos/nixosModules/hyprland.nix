@@ -2,10 +2,10 @@
 
 {
   # SDDM display Manager
-  services.xserver.displayManager.sddm = {
-    enable = true;
-    theme = "${ import ./sddm-theme.nix { inherit pkgs; } }";
-  };
+  # services.xserver.displayManager.sddm = {
+  #   enable = true;
+  #   theme = "${ import ./sddm-theme.nix { inherit pkgs; } }";
+  # };
 
   # Enable xserver
   services.xserver.enable = true;
