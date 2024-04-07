@@ -22,6 +22,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
+      epiphany
       spotify
     ];
     shell = pkgs.zsh;
