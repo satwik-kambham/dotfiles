@@ -3,8 +3,11 @@
 {
   environment.systemPackages = with pkgs; [
     btop # System Monitor
-    marktext # Markdown editor
     evince # PDF reader
     thunderbird # Email client
+    apostrophe # Markdown Editor
+    errands # Todo App
+    newsflash # News Feed Reader
+    gnome-podcasts # Podcast Player
   ];
 }
