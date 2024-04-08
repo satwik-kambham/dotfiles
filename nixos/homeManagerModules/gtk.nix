@@ -8,19 +8,23 @@
     };
   };
 
-  # # GTK Theme
-  # gtk = {
-  #   enable = true;
-  #   theme = {
-  #     name = "Catppuccin-Mocha-Standard-Green-Dark";
-  #     package = pkgs.catppuccin-gtk.override {
-  #       accents = [ "green" ];
-  #       variant = "mocha";
-  #     };
-  #   };
-  #   iconTheme.package = pkgs.sweet-folders;
-  #   iconTheme.name = "Sweet-Rainbow";
-  # };
+  # GTK Theme
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome.gnome-themes-extra;
+    };
+    # theme = {
+    #   name = "Catppuccin-Mocha-Standard-Green-Dark";
+    #   package = pkgs.catppuccin-gtk.override {
+    #     accents = [ "green" ];
+    #     variant = "mocha";
+    #   };
+    # };
+    # iconTheme.package = pkgs.sweet-folders;
+    # iconTheme.name = "Sweet-Rainbow";
+  };
 
   xdg.configFile = {
     "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
