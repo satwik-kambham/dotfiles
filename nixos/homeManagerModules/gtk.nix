@@ -6,24 +6,21 @@
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
     };
+    "org/gnome/desktop/wm/preferences" = {
+      button-layout = "minimize,maximize,close";
+    };
   };
 
   # GTK Theme
   gtk = {
     enable = true;
     theme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome.gnome-themes-extra;
+      name = "Catppuccin-Mocha-Standard-Green-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "green" ];
+        variant = "mocha";
+      };
     };
-    # theme = {
-    #   name = "Catppuccin-Mocha-Standard-Green-Dark";
-    #   package = pkgs.catppuccin-gtk.override {
-    #     accents = [ "green" ];
-    #     variant = "mocha";
-    #   };
-    # };
-    # iconTheme.package = pkgs.sweet-folders;
-    # iconTheme.name = "Sweet-Rainbow";
   };
 
   xdg.configFile = {
