@@ -7,7 +7,5 @@
     thunderbird # Email client
     apostrophe # Markdown Editor
     errands # Todo App
-    newsflash # News Feed Reader
-    gnome-podcasts # Podcast Player
   ];
 }
