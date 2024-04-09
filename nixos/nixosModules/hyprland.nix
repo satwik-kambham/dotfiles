@@ -35,6 +35,7 @@
     swww # Wallpaper Manager
     waypaper # Wallpaper Manager
     rofi-wayland # Launcher
+    ulauncher # Alternate launcher
     networkmanagerapplet # NM Applet
     brightnessctl # Brightness controller
     cliphist # Clipboard Manager
