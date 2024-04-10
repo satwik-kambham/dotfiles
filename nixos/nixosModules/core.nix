@@ -2,8 +2,18 @@
 
 {
   # Bootloader
-  boot.loader.systemd-boot.enable = true;
+  # boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub = {
+    enable = true;
+    device = "nodev";
+    efiSupport = true;
+    useOSProber = true;
+    theme = pkgs.sleek-grub-theme.override {
+      withBanner = "Hello Satwik";
+      withStyle = "bigSur";
+    };
+  };
 
   # Networking
   networking.networkmanager.enable = true;
