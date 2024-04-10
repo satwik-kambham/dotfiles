@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -12,6 +12,7 @@
     ../../homeManagerModules/waybar.nix
     ../../homeManagerModules/hyprland.nix
     ../../homeManagerModules/tmux.nix
+    inputs.catppuccin.homeManagerModules.catppuccin
   ];
 
   home.username = "satwik";

@@ -9,9 +9,9 @@
     device = "nodev";
     efiSupport = true;
     useOSProber = true;
-    theme = pkgs.sleek-grub-theme.override {
-      withBanner = "Hello Satwik";
-      withStyle = "bigSur";
+    catppuccin = {
+      enable = true;
+      flavor = "mocha";
     };
   };
 
