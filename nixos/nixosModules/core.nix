@@ -11,7 +11,7 @@
     useOSProber = true;
     catppuccin = {
       enable = true;
-      flavor = "mocha";
+      flavour = "mocha";
     };
   };
 
