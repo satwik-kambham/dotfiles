@@ -4,7 +4,6 @@
   environment.systemPackages = with pkgs; [
     # Text Editors
     helix
-    neovim
     vscode
     (appimageTools.wrapType2 {
       name = "papyrus";
@@ -26,6 +25,7 @@
     nvidia-podman
     podman-tui
     nil
+    devenv
   ];
 
   # Containerization
