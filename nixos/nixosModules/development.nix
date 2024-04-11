@@ -25,6 +25,7 @@
     nvidia-podman
     podman-tui
     nil
+    cachix
     devenv
   ];
 
