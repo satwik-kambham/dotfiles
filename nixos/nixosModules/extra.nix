@@ -5,7 +5,7 @@
     btop # System Monitor
     evince # PDF reader
     thunderbird # Email client
-    apostrophe # Markdown Editor
     errands # Todo App
+    obsidian # Note taking app
   ];
 }
