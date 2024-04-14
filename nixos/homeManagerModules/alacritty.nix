@@ -6,7 +6,7 @@
     enable = true;
     settings = {
       font.size = 16;
-      window.opacity = 0.7;
+      # window.opacity = 0.7;
       colors = {
         primary = {
           background = "#1E1E2E";
