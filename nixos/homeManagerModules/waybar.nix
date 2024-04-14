@@ -11,6 +11,7 @@
         spacing = 10;
         modules-left = [
           "hyprland/workspaces"
+          "wlr/taskbar"
           "cpu"
           "memory"
           "backlight"
@@ -34,6 +35,10 @@
             "3" = [ ];
             "4" = [ ];
           };
+        };
+        "wlr/taskbar" = {
+          on-click = "activate";
+          format = "{icon}";
         };
         cpu = {
           interval = 15;

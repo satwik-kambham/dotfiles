@@ -60,6 +60,13 @@ window#waybar.hidden {
     background: @surface0;
 }
 
+#taskbar {
+    margin-right: 8px;
+    border-radius: 10px;
+    transition: none;
+    background: @surface0;
+}
+
 #workspaces button {
     transition: none;
     background: transparent;

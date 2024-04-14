@@ -8,7 +8,7 @@
     enable = true;
     device = "nodev";
     efiSupport = true;
-    useOSProber = true;
+    # useOSProber = true;
     catppuccin = {
       enable = true;
       flavour = "mocha";
