@@ -12,6 +12,7 @@
     ../../homeManagerModules/waybar.nix
     ../../homeManagerModules/hyprland.nix
     ../../homeManagerModules/tmux.nix
+    ../../homeManagerModules/zoxide.nix
     inputs.catppuccin.homeManagerModules.catppuccin
   ];
 
