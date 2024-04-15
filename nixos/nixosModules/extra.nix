@@ -7,5 +7,6 @@
     thunderbird # Email client
     errands # Todo App
     obsidian # Note taking app
+    zed-editor # Extra code editor
   ];
 }
