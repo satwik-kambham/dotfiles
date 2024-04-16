@@ -9,6 +9,9 @@
     "org/gnome/desktop/wm/preferences" = {
       button-layout = ":minimize,maximize,close";
     };
+    "org/gnome/shell/extensions/pop-shell" = {
+      hint-color-rgba = "rgba(203, 166, 247, 1)";
+    };
   };
 
   # GTK Theme
