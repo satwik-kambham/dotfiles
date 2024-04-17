@@ -38,6 +38,7 @@
     ulauncher # Alternate launcher
     networkmanagerapplet # NM Applet
     brightnessctl # Brightness controller
+    playerctl # Media controller
     cliphist # Clipboard Manager
     wl-clipboard # Clipboard Manager
     gnome.nautilus # File Manager
