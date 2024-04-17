@@ -27,6 +27,7 @@
     bat
     nvidia-podman
     podman-tui
+    podman-desktop
     nil
     cachix
     devenv
