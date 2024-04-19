@@ -10,7 +10,7 @@
     };
     themes.fleet_dark_transparent = {
       inherits = "fleet_dark";
-      "ui.background" = {};
+      "ui.background" = { };
       "ui.statusline" = {
         fg = "#d1d1d1";
       };
