@@ -8,5 +8,6 @@
     errands # Todo App
     obsidian # Note taking app
     zed-editor # Extra code editor
+    ollama # LLM inference engine
   ];
 }
