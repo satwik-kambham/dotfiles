@@ -5,11 +5,11 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = "fleet_dark_transparent";
+      theme = "catppuccin_mocha_transparent";
       editor.soft-wrap.enable = true;
     };
-    themes.fleet_dark_transparent = {
-      inherits = "fleet_dark";
+    themes.catppuccin_mocha_transparent = {
+      inherits = "catppuccin_mocha";
       "ui.background" = { };
       "ui.statusline" = {
         fg = "#d1d1d1";
