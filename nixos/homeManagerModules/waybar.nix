@@ -25,6 +25,7 @@
           "bluetooth"
           "network"
           "battery"
+          "custom/lock"
           "custom/reboot"
           "custom/poweroff"
         ];
@@ -100,6 +101,10 @@
         tray = {
           icon-size = 16;
           spacing = 10;
+        };
+        "custom/lock" = {
+          format = "";
+          on-click = "hyprlock";
         };
         "custom/reboot" = {
           format = "";

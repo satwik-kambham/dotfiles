@@ -209,6 +209,15 @@ window#waybar.hidden {
     background: @surface0;
 }
 
+#custom-lock {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    background: @surface0;
+    color: @yellow;
+}
+
 #custom-reboot {
     padding-left: 16px;
     padding-right: 16px;

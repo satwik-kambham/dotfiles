@@ -44,6 +44,7 @@
     gnome.nautilus # File Manager
     gnome.sushi # File Previewer
     lxqt.lxqt-policykit # Auth agent
+    hyprlock # Screen Lock
 
     # SDDM
     libsForQt5.qt5.qtquickcontrols2

@@ -13,6 +13,7 @@
       };
     })
     jetbrains.pycharm-community
+    emacs-gtk
 
     git
     difftastic
