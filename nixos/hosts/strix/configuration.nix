@@ -13,7 +13,7 @@
     ../../nixosModules/steam.nix
     ../../nixosModules/virtualization.nix
     ../../nixosModules/flatpak.nix
-    ../../nixosModules/cachix.nix
+    # ../../nixosModules/cachix.nix
     inputs.home-manager.nixosModules.default
   ];
 

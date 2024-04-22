@@ -30,8 +30,8 @@
     podman-tui
     podman-desktop
     nil
-    cachix
-    devenv
+    # cachix
+    # devenv
   ];
 
   # Containerization
