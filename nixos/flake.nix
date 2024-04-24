@@ -13,6 +13,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Nix Vim
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -29,6 +35,7 @@
           modules = [
             ./hosts/strix/configuration.nix
             inputs.catppuccin.nixosModules.catppuccin
+            inputs.nixvim.nixosModules.nixvim
           ];
         };
       };

@@ -14,6 +14,7 @@
     ../../nixosModules/virtualization.nix
     ../../nixosModules/flatpak.nix
     # ../../nixosModules/cachix.nix
+    ../../nixosModules/nixvim.nix
     inputs.home-manager.nixosModules.default
   ];
 
