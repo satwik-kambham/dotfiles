@@ -7,7 +7,7 @@
   };
 
   home.file."hyprlock.conf" = {
-    source = ./files/hyprlock.conf;    
+    source = ./files/hyprlock.conf;
     target = ".config/hypr/hyprlock.conf";
   };
 }
