@@ -46,7 +46,9 @@
 }
 
 window#waybar {
-    background: transparent;
+    background: @mantle;
+    border-radius: 10px;
+    padding: 2px;
 }
 
 window#waybar.hidden {
@@ -57,19 +59,19 @@ window#waybar.hidden {
     margin-right: 8px;
     border-radius: 10px;
     transition: none;
-    background: @surface0;
+    /* background: @surface0; */
 }
 
 #taskbar {
     margin-right: 8px;
     border-radius: 10px;
     transition: none;
-    background: @surface0;
+    /* background: @surface0; */
 }
 
 #workspaces button {
     transition: none;
-    background: transparent;
+    /* background: transparent; */
     padding: 5px;
     font-size: 18px;
 }
@@ -84,7 +86,7 @@ window#waybar.hidden {
     box-shadow: inherit;
     text-shadow: inherit;
     border-radius: inherit;
-    background: @surface1;
+    /* background: @surface1; */
 }
 
 #cpu {
@@ -92,7 +94,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    background: @surface0;
+    /* background: @surface0; */
     color: @flamingo;
 }
 
@@ -101,7 +103,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    background: @surface0;
+    /* background: @surface0; */
     color: @rosewater;
 }
 
@@ -111,12 +113,12 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    background: @surface0;
+    /* background: @surface0; */
     color: @green;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
+    /* background-color: #90b1b1; */
     color: @red;
 }
 
@@ -126,7 +128,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    background: @surface0;
+    /* background: @surface0; */
     color: @lavender;
 }
 
@@ -136,12 +138,12 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    background: @surface0;
+    /* background: @surface0; */
     color: @teal;
 }
 
 #temperature.critical {
-    background-color: @red;
+    /* background-color: @red; */
 }
 
 #backlight {
@@ -150,7 +152,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    background: @surface0;
+    /* background: @surface0; */
     color: @yellow;
 }
 
@@ -159,7 +161,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    background-color: @surface0;
+    /* background-color: @surface0; */
     color: @lavender;
 }
 
@@ -187,7 +189,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    background-color: @surface0;
+    /* background-color: @surface0; */
     color: @sky;
 }
 
@@ -196,7 +198,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    background-color: @surface0;
+    /* background-color: @surface0; */
     color: @sapphire;
 }
 
@@ -206,7 +208,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    background: @surface0;
+    /* background: @surface0; */
 }
 
 #custom-lock {
@@ -214,7 +216,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    background: @surface0;
+    /* background: @surface0; */
     color: @yellow;
 }
 
@@ -223,7 +225,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    background: @surface0;
+    /* background: @surface0; */
     color: @peach;
 }
 
@@ -233,7 +235,7 @@ window#waybar.hidden {
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
-    background: @surface0;
+    /* background: @surface0; */
     color: @red;
 }
 
