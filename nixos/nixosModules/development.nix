@@ -39,7 +39,7 @@
     enable = true;
     dockerCompat = true;
   };
-  virtualisation.containers.cdi.dynamic.nvidia.enable = true;
+  hardware.nvidia-container-toolkit.enable = true;
 
   # direnv
   programs.direnv = {
