@@ -35,8 +35,8 @@
   # Cursor theme
   home.pointerCursor = {
     gtk.enable = true;
-    package = pkgs.catppuccin-cursors.mochaGreen;
-    name = "Catppuccin-Mocha-Green-Cursors";
-    size = 28;
+    package = pkgs.apple-cursor;
+    name = "macOS-Monterey";
+    size = 20;
   };
 }
