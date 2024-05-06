@@ -7,6 +7,7 @@
     settings = {
       theme = "catppuccin_mocha_transparent";
       editor.soft-wrap.enable = true;
+      editor.color-modes = true;
     };
     themes.catppuccin_mocha_transparent = {
       inherits = "catppuccin_mocha";
