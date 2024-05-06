@@ -9,5 +9,9 @@
     obsidian # Note taking app
     zed-editor # Extra code editor
     ollama # LLM inference engine
+    todo-txt-cli # Todo.txt CLI
+    (todofi-sh.override {
+      rofi = rofi-wayland;
+    }) # Todo.txt Rofi
   ];
 }
