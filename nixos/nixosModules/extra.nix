@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     btop # System Monitor
+    ncdu # Disk space analyser
     evince # PDF reader
     thunderbird # Email client
     obsidian # Note taking app
