@@ -51,6 +51,7 @@
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
     monaspace
     vistafonts
+    inter
   ];
 
   # ZSH config

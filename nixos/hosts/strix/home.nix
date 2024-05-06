@@ -13,6 +13,7 @@
     ../../homeManagerModules/hyprland.nix
     ../../homeManagerModules/tmux.nix
     ../../homeManagerModules/zoxide.nix
+    ../../homeManagerModules/rofi.nix
     inputs.catppuccin.homeManagerModules.catppuccin
   ];
 
