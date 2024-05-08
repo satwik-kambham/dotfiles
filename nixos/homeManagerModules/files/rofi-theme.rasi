@@ -35,7 +35,7 @@ inputbar {
     font:       "Inter 20";
     padding:    12px;
     spacing:    12px;
-    children:   [ icon-search, entry ];
+    // children:   [ icon-search, entry ];
 }
 
 icon-search {
@@ -44,15 +44,20 @@ icon-search {
     size: 28px;
 }
 
-icon-search, entry, element-icon, element-text {
+prompt, icon-search, entry, element-icon, element-text {
     vertical-align: 0.5;
 }
 
 entry {
     font:   inherit;
 
-    placeholder         : "Search";
+    // placeholder         : "Search";
     placeholder-color   : @fg2;
+}
+
+prompt {
+    font: inherit;
+    text-color: @fg2;
 }
 
 message {
