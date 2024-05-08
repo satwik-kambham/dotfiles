@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ../../nixosModules/core.nix
     ../../nixosModules/extra.nix
+    ../../nixosModules/scripts/scripts.nix
     ../../nixosModules/hyprland.nix
     ../../nixosModules/gnome.nix
     ../../nixosModules/hardware.nix
