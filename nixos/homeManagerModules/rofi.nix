@@ -3,7 +3,7 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
-    theme = ./files/spotlight.rasi;
+    theme = ./files/rofi-theme.rasi;
     extraConfig = {
       modi = "drun,calc,window";
     };
