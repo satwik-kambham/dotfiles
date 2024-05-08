@@ -13,5 +13,6 @@
     (todofi-sh.override {
       rofi = rofi-wayland;
     }) # Todo.txt Rofi
+    rclone # Cloud sync CLI
   ];
 }
