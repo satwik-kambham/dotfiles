@@ -16,8 +16,13 @@ pkgs.writeShellScriptBin "todofi" ''
     output=$(echo "$output" | sed "s/^\((B) .*\)$/\<span foreground='#f9e2af'\>\1\<\/span\>/")
     output=$(echo "$output" | sed "s/^\((C) .*\)$/\<span foreground='#a6e3a1'\>\1\<\/span\>/")
 
-    # Pipe the result to the less command
-    echo "$output" | rofi -dmenu -markup-rows -p "Filter" -mesg "Press alt+c to run a command"
+    # Get selected index
+    output=$(echo "$output" | rofi -dmenu -markup-rows -p "Filter" -mesg "Press alt+c to run a command" -format d)
+
+    # Get actual index
+    output=$(todo.sh -p ls | awk "NR==$output" | grep -oE '^[0-9]+')
+
+    echo "$output"
   }
 
   list
