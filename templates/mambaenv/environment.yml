@@ -1,4 +1,4 @@
-name: pruner
+name: mambaenv
 channels:
   - pytorch
   - nvidia

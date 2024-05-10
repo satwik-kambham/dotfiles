@@ -11,10 +11,11 @@ let
       set -e
       eval "$(micromamba shell hook --shell=posix)"
       export MAMBA_ROOT_PREFIX=${builtins.getEnv "PWD"}/.mamba
-      # micromamba create -y -f environment.yml
-      micromamba create -y -n pruner -f conda-lock.yml
-      micromamba activate pruner
-      pip install -e .
+      export TMPDIR=/tmp
+      micromamba create -y -f environment.yml
+      # micromamba create -y -n mambaenv -f conda-lock.yml
+      micromamba activate mambaenv
+      # pip install -e .
       set +e
     '';
   };
