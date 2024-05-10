@@ -1,0 +1,42 @@
+name: pruner
+channels:
+  - pytorch
+  - nvidia
+  - nvidia/label/cuda-12.1.0
+  - conda-forge
+  - huggingface
+dependencies:
+  - python=3.10
+  - pip
+  - setuptools
+  - conda-lock
+  - pytorch
+  - pytorch-cuda=12.1
+  - torchvision
+  - lightning
+  - cuda-nvcc
+  - numpy
+  - scipy
+  - ray-tune
+  - optuna
+  - transformers
+  - datasets
+  - gradio
+  - onnx
+  - onnxruntime
+  - jupyter
+  - jupyterlab
+  - ipython
+  - ipywidgets
+  - tqdm
+  - ruff
+  - wandb
+  - pandas
+  - matplotlib
+  - bokeh
+  - seaborn
+  - python-lsp-server
+  - python-lsp-ruff
+  - pip:
+      - catppuccin-jupyterlab
+      - catppuccin-matplotlib
