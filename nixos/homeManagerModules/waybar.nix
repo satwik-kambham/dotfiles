@@ -30,6 +30,12 @@
           "custom/poweroff"
         ];
         "hyprland/workspaces" = {
+          # "format" = "{name}: {icon}";
+          "format" = "{icon}";
+          "format-icons" = {
+            "active" = "";
+            "default" = "";
+        	};
           "persistent-workspaces" = {
             "1" = [ ];
             "2" = [ ];
