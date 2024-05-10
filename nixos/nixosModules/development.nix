@@ -23,12 +23,12 @@
     gnumake
     ripgrep
     tmux
+    zellij
     eza
     zoxide
     bat
     nvidia-podman
     podman-tui
-    podman-desktop
     nil
     # cachix
     # devenv
