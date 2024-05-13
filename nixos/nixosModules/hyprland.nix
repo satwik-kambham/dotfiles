@@ -4,8 +4,8 @@
   # SDDM display Manager
   services.displayManager.sddm = {
     enable = true;
-  #   theme = "${ import ./sddm-theme.nix { inherit pkgs; } }";
-    theme = "catppuccin-mocha";
+    theme = "${ import ./sddm-theme.nix { inherit pkgs; } }";
+    # theme = "catppuccin-mocha";
   };
 
   # Enable xserver
@@ -50,8 +50,8 @@
     libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtsvg
     libsForQt5.qt5.qtgraphicaleffects
-    (catppuccin-sddm.override {
-      
-    })
+    # (catppuccin-sddm.override {
+    #   flavor = "mocha";
+    # })
   ];
 }
