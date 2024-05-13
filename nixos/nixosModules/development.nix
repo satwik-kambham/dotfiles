@@ -47,6 +47,11 @@
     enable = true;
   };
 
+  # Nix-ld
+  programs.nix-ld = {
+    enable = true;
+  };
+
   # Fonts
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
