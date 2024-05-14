@@ -49,7 +49,7 @@
 
   # Nix-ld
   programs.nix-ld = {
-    enable = false;
+    enable = true;
   };
 
   # Fonts

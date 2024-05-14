@@ -2,11 +2,12 @@
 
 {
   # SDDM display Manager
-  services.displayManager.sddm = {
-    enable = true;
-    theme = "${ import ./sddm-theme.nix { inherit pkgs; } }";
-    # theme = "catppuccin-mocha";
-  };
+  # services.displayManager.sddm = {
+  #   enable = true;
+  #   package = pkgs.kdePackages.sddm;
+  #   # theme = "${ import ./sddm-theme.nix { inherit pkgs; } }";
+  #   theme = "catppuccin-mocha";
+  # };
 
   # Enable xserver
   services.xserver.enable = true;
@@ -47,11 +48,11 @@
     hyprlock # Screen Lock
 
     # SDDM
-    libsForQt5.qt5.qtquickcontrols2
-    libsForQt5.qt5.qtsvg
-    libsForQt5.qt5.qtgraphicaleffects
-    # (catppuccin-sddm.override {
-    #   flavor = "mocha";
-    # })
+    # libsForQt5.qt5.qtquickcontrols2
+    # libsForQt5.qt5.qtsvg
+    # libsForQt5.qt5.qtgraphicaleffects
+    (catppuccin-sddm.override {
+      flavor = "mocha";
+    })
   ];
 }
