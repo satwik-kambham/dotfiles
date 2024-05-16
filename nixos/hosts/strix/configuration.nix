@@ -11,7 +11,7 @@
     ../../nixosModules/hardware.nix
     ../../nixosModules/nvidia.nix
     ../../nixosModules/development.nix
-    ../../nixosModules/steam.nix
+    ../../nixosModules/gaming.nix
     ../../nixosModules/virtualization.nix
     ../../nixosModules/flatpak.nix
     ../../nixosModules/cachix.nix
