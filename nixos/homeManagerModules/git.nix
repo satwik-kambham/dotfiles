@@ -10,6 +10,7 @@
     lfs.enable = true;
     extraConfig = {
       init.defaultBranch = "main";
+      http.postBuffer = 524288000;
     };
   };
 
