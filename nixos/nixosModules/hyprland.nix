@@ -46,6 +46,7 @@
     gnome.sushi # File Previewer
     lxqt.lxqt-policykit # Auth agent
     hyprlock # Screen Lock
+    grimblast # Screnshot Tool
 
     # SDDM
     # libsForQt5.qt5.qtquickcontrols2
