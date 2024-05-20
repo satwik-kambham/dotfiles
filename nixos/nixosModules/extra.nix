@@ -10,6 +10,14 @@
     zed-editor # Extra code editor
     ollama # LLM inference engine
     todo-txt-cli # Todo.txt CLI
-    rclone # Cloud sync CLI
+    # rclone # Cloud sync CLI
   ];
+
+  # Syncthing
+  services.syncthing = {
+    enable = true;
+    user = "satwik";
+    openDefaultPorts = true;
+    dataDir = "/home/satwik/Documents/sync";
+  };
 }
