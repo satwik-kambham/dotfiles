@@ -8,7 +8,7 @@
     ../../nixosModules/scripts/scripts.nix
     ../../nixosModules/hyprland.nix
     ../../nixosModules/gnome.nix
-    ../../nixosModules/kde.nix
+    # ../../nixosModules/kde.nix
     ../../nixosModules/hardware.nix
     ../../nixosModules/nvidia.nix
     ../../nixosModules/development.nix
