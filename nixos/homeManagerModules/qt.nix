@@ -4,8 +4,8 @@
   # QT Theme
   qt = {
     enable = true;
-    platformTheme.name = "adwaita";
-    style.name = "adwaita-dark";
-    style.package = pkgs.adwaita-qt;
+    # platformTheme.name = "adwaita";
+    # style.name = "adwaita-dark";
+    # style.package = pkgs.adwaita-qt;
   };
 }
