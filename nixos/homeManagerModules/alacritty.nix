@@ -99,4 +99,12 @@
       };
     };
   };
+
+  programs.foot = {
+    enable = true;
+    catppuccin = {
+      enable = true;
+      flavour = "mocha";
+    };
+  };
 }

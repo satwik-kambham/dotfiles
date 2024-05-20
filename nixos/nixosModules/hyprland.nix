@@ -30,6 +30,7 @@
     # Terminal Emulators
     alacritty
     kitty
+    foot
 
     waybar # Status Bar
     eww # Status Bar
