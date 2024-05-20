@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
-  services.xserver.desktopManager.plasma6.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.gnome.seahorse.out}/libexec/seahorse/ssh-askpass";
 
   environment.systemPackages = with pkgs; [
 
