@@ -10,6 +10,7 @@
     zed-editor # Extra code editor
     ollama # LLM inference engine
     todo-txt-cli # Todo.txt CLI
+    nb # Note taking CLI
     # rclone # Cloud sync CLI
   ];
 
