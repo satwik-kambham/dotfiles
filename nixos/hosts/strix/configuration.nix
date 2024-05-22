@@ -28,6 +28,7 @@
     packages = with pkgs; [
       firefox
       epiphany
+      chromium
       spotify
     ];
     shell = pkgs.zsh;
