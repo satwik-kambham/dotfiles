@@ -35,7 +35,7 @@
           "format-icons" = {
             "active" = "";
             "default" = "";
-        	};
+          };
           "persistent-workspaces" = {
             "1" = [ ];
             "2" = [ ];

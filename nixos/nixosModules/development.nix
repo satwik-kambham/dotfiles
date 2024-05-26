@@ -67,12 +67,12 @@
       xorg.libxshmfence
       xorg.libXxf86vm
       libelf
-      
+
       # Required
       glib
       gtk2
       bzip2
-      
+
       # Without these it silently fails
       xorg.libXinerama
       xorg.libXcursor
@@ -92,7 +92,7 @@
       ffmpeg
       # Only libraries are needed from those two
       libudev0-shim
-      
+
       # Verified games requirements
       xorg.libXt
       xorg.libXmu
@@ -103,7 +103,7 @@
       glew110
       libidn
       tbb
-      
+
       # Other things from runtime
       flac
       freeglut
