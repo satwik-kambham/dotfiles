@@ -22,6 +22,7 @@
     wget
     gnumake
     ripgrep
+    fd
     tmux
     zellij
     eza
