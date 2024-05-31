@@ -8,6 +8,7 @@
     ../../homeManagerModules/starship.nix
     ../../homeManagerModules/dunst.nix
     ../../homeManagerModules/helix.nix
+    ../../homeManagerModules/emacs.nix
     ../../homeManagerModules/git.nix
     ../../homeManagerModules/waybar.nix
     ../../homeManagerModules/hyprland.nix

@@ -20,6 +20,7 @@
     gh
     curl
     wget
+    coreutils
     gnumake
     ripgrep
     fd
@@ -34,6 +35,8 @@
     nil
     # cachix
     # devenv
+
+    clang
   ];
 
   # Containerization
