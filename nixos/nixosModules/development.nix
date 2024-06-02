@@ -108,6 +108,8 @@
       libidn
       tbb
 
+      zlib
+
       # Other things from runtime
       flac
       freeglut
