@@ -200,6 +200,8 @@
       gs = "git status";
       gd = "git diff";
       gdc = "git diff --cached";
+      ga = "git add .";
+      gp = "git push";
     };
 
     histSize = 10000;
