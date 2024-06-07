@@ -197,6 +197,9 @@
       li = "l --git-ignore";
       lt = "li -T";
       shx = "sudo hx";
+      gs = "git status";
+      gd = "git diff";
+      gdc = "git diff --cached";
     };
 
     histSize = 10000;
