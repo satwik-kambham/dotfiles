@@ -202,6 +202,7 @@
       gdc = "git diff --cached";
       ga = "git add .";
       gp = "git push";
+      gc = "git commit -m";
     };
 
     histSize = 10000;
