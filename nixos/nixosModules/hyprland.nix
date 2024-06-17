@@ -2,12 +2,12 @@
 
 {
   # SDDM display Manager
-  services.displayManager.sddm = {
-    enable = true;
-    package = pkgs.kdePackages.sddm;
-    # theme = "${ import ./sddm-theme.nix { inherit pkgs; } }";
-    theme = "${pkgs.catppuccin-sddm}/share/sddm/themes/catppuccin-mocha";
-  };
+  # services.displayManager.sddm = {
+  #   enable = true;
+  #   package = pkgs.kdePackages.sddm;
+  #   # theme = "${ import ./sddm-theme.nix { inherit pkgs; } }";
+  #   theme = "${pkgs.catppuccin-sddm}/share/sddm/themes/catppuccin-mocha";
+  # };
 
   # Enable xserver
   services.xserver.enable = true;
@@ -53,8 +53,8 @@
     # libsForQt5.qt5.qtquickcontrols2
     # libsForQt5.qt5.qtsvg
     # libsForQt5.qt5.qtgraphicaleffects
-    (catppuccin-sddm.override {
-      flavor = "mocha";
-    })
+    # (catppuccin-sddm.override {
+    #   flavor = "mocha";
+    # })
   ];
 }
