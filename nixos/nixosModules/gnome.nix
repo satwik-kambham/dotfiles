@@ -8,5 +8,6 @@
     # gnomeExtensions.pop-shell
     # pop-launcher
     gnomeExtensions.forge
+    gnomeExtensions.clipboard-history
   ];
 }
