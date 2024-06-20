@@ -12,6 +12,8 @@
     todo-txt-cli # Todo.txt CLI
     # nb # Note taking CLI
     # rclone # Cloud sync CLI
+    maestral
+    maestral-gui
   ];
 
   # Syncthing
