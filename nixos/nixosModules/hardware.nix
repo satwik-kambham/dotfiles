@@ -2,7 +2,7 @@
 
 {
   # Solution for heat (https://www.reddit.com/r/NixOS/comments/1712eoe/is_there_a_way_to_check_metricsheat_regarding_cpu/?rdt=44113)
-  services.auto-cpufreq.enable = true;
+  # services.auto-cpufreq.enable = true;
 
   # Bluetooth
   hardware.bluetooth.enable = true;
