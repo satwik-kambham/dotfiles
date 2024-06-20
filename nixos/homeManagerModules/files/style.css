@@ -46,7 +46,7 @@
 }
 
 window#waybar {
-    background: @mantle;
+    background: rgba(24, 24, 37, 0.7);
     border-radius: 10px;
     padding: 2px;
     border: 2px solid @surface1;
