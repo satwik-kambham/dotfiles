@@ -13,6 +13,7 @@
       };
     })
     # jetbrains.pycharm-community
+    jetbrains.rust-rover
     # emacs-gtk
 
     git
