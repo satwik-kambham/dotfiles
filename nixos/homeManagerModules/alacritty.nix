@@ -19,41 +19,41 @@
       };
       colors = {
         primary = {
-          background = "#1E1E2E";
+          # background = "#1E1E2E";
           foreground = "#CDD6F4";
           dim_foreground = "#CDD6F4";
           bright_foreground = "#CDD6F4";
         };
         cursor = {
-          text = "#1E1E2E";
+          # text = "#1E1E2E";
           cursor = "#F5E0DC";
         };
         vi_mode_cursor = {
-          text = "#1E1E2E";
+          # text = "#1E1E2E";
           cursor = "#B4BEFE";
         };
         search.matches = {
-          foreground = "#1E1E2E";
+          # foreground = "#1E1E2E";
           background = "#A6ADC8";
         };
         search.focused_match = {
-          foreground = "#1E1E2E";
+          # foreground = "#1E1E2E";
           background = "#A6E3A1";
         };
         footer_bar = {
-          foreground = "#1E1E2E";
+          # foreground = "#1E1E2E";
           background = "#A6ADC8";
         };
         hints.start = {
-          foreground = "#1E1E2E";
+          # foreground = "#1E1E2E";
           background = "#F9E2AF";
         };
         hints.end = {
-          foreground = "#1E1E2E";
+          # foreground = "#1E1E2E";
           background = "#A6ADC8";
         };
         selection = {
-          text = "#1E1E2E";
+          # text = "#1E1E2E";
           background = "#F5E0DC";
         };
         normal = {
