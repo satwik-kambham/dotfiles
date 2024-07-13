@@ -29,6 +29,7 @@
       firefox
       epiphany
       chromium
+      qutebrowser
       spotify
     ];
     shell = pkgs.zsh;
