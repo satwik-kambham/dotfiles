@@ -14,6 +14,8 @@
     # rclone # Cloud sync CLI
     maestral
     maestral-gui
+    bitwarden-desktop
+    bitwarden-cli
   ];
 
   # Syncthing
