@@ -16,6 +16,7 @@
     maestral-gui
     bitwarden-desktop
     bitwarden-cli
+    via
   ];
 
   # Syncthing
