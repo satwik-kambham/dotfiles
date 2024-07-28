@@ -10,7 +10,7 @@
     ../../homeManagerModules/helix.nix
     ../../homeManagerModules/git.nix
     ../../homeManagerModules/waybar.nix
-    # ../../homeManagerModules/hyprland.nix
+    ../../homeManagerModules/hyprland.nix
     ../../homeManagerModules/tmux.nix
     ../../homeManagerModules/zellij.nix
     ../../homeManagerModules/zoxide.nix
