@@ -12,6 +12,9 @@
         hash = "sha256-dyN0RN4vswDSa2U3udhu0GsC/KVLLjAkbhK3R2z8ZHk=";
       };
     })
+    # jetbrains.pycharm-community
+    jetbrains.rust-rover
+    # emacs-gtk
 
     git
     difftastic
@@ -31,6 +34,10 @@
     podman-tui
     pods
     nil
+    # cachix
+    # devenv
+
+    clang
   ];
 
   # Containerization

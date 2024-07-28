@@ -4,23 +4,26 @@
   imports = [
     ./hardware-configuration.nix
     ../../nixosModules/core.nix
-    ../../nixosModules/hardware.nix
     ../../nixosModules/extra.nix
-    ../../nixosModules/development.nix
-    ../../nixosModules/cachix.nix
-    ../../nixosModules/flatpak.nix
-    ../../nixosModules/gaming.nix
-    ../../nixosModules/gnome.nix
+    ../../nixosModules/scripts/scripts.nix
     ../../nixosModules/hyprland.nix
+    ../../nixosModules/gnome.nix
+    # ../../nixosModules/kde.nix
+    ../../nixosModules/hardware.nix
     ../../nixosModules/nvidia.nix
+    ../../nixosModules/development.nix
+    ../../nixosModules/gaming.nix
     ../../nixosModules/virtualization.nix
+    ../../nixosModules/flatpak.nix
+    ../../nixosModules/cachix.nix
+    ../../nixosModules/nixvim.nix
     inputs.home-manager.nixosModules.default
   ];
 
-  # Defining user accounts. Don't forget to set a password with 'passwd'.
+  # Defining user accounts. Don't forget to set a password with ‘passwd’.
   users.users.satwik = {
-    description = "satwik";
     isNormalUser = true;
+    description = "satwik";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
@@ -40,7 +43,7 @@
     };
   };
 
-  # Asusd
+  # Asus stuff
   programs.rog-control-center.enable = true;
   services.asusd = {
     enable = true;
@@ -59,13 +62,13 @@
     };
   };
 
-  # Enable touchpad support
+  # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
-  # Zsh aliases
   programs.zsh.shellAliases = {
     update = "sudo nixos-rebuild switch --flake .#strix";
     update-safe = "sudo nixos-rebuild boot --flake .#strix";
+    t = "todo.sh";
   };
 
   # Networking hostname

@@ -1,19 +1,9 @@
-{ pkgs, ... }:
+{pkgs, ... }:
 
 {
   # Bootloader
-  # boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.grub = {
-    enable = true;
-    device = "nodev";
-    efiSupport = true;
-    # useOSProber = true;
-    catppuccin = {
-      enable = true;
-      flavor = "mocha";
-    };
-  };
 
   # Networking
   networking.networkmanager.enable = true;
@@ -22,31 +12,15 @@
   time.timeZone = "Asia/Kolkata";
 
   # Internationalisation
-  i18n = {
-    defaultLocale = "en_US.UTF-8";
-    extraLocaleSettings = {
-      LC_ADDRESS = "en_IN";
-      LC_IDENTIFICATION = "en_IN";
-      LC_MEASUREMENT = "en_IN";
-      LC_MONETARY = "en_IN";
-      LC_NAME = "en_IN";
-      LC_NUMERIC = "en_IN";
-      LC_PAPER = "en_IN";
-      LC_TELEPHONE = "en_IN";
-      LC_TIME = "en_IN";
-    };
-  };
+  i18n.defaultLocale = "en_US.UTF-8";
 
-  # Keyboard layout
-  services.xserver = {
-    xkb.layout = "us";
-    xkb.variant = "";
-  };
+  # X!! Keymap
+  services.xserver.xkb.layout = "us";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Unable experimental features
+  # Enable experimental features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Garbage collector
@@ -57,6 +31,6 @@
     options = "--delete-older-than 7d";
   };
 
-  # System State Version
+  # System state version
   system.stateVersion = "24.05";
 }

@@ -1,6 +1,14 @@
 { pkgs, ... }:
 
 {
+  # SDDM display Manager
+  # services.displayManager.sddm = {
+  #   enable = true;
+  #   package = pkgs.kdePackages.sddm;
+  #   # theme = "${ import ./sddm-theme.nix { inherit pkgs; } }";
+  #   theme = "${pkgs.catppuccin-sddm}/share/sddm/themes/catppuccin-mocha";
+  # };
+
   # Enable xserver
   services.xserver.enable = true;
 
@@ -35,10 +43,18 @@
     playerctl # Media controller
     cliphist # Clipboard Manager
     wl-clipboard # Clipboard Manager
-    nautilus # File Manager
-    sushi # File Previewer
+    gnome.nautilus # File Manager
+    gnome.sushi # File Previewer
     lxqt.lxqt-policykit # Auth agent
     hyprlock # Screen Lock
     grimblast # Screnshot Tool
+
+    # SDDM
+    # libsForQt5.qt5.qtquickcontrols2
+    # libsForQt5.qt5.qtsvg
+    # libsForQt5.qt5.qtgraphicaleffects
+    # (catppuccin-sddm.override {
+    #   flavor = "mocha";
+    # })
   ];
 }

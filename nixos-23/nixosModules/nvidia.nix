@@ -9,7 +9,14 @@
 
   # GPU Drivers and other nvidia related configs
   services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.graphics.enable = true;
+  hardware.opengl.extraPackages = with pkgs; [
+    vaapiVdpau
+  ];
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
   hardware.nvidia = {
     modesetting.enable = true;
     open = false;
