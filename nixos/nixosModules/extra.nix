@@ -7,6 +7,5 @@
     evince # PDF reader
     obsidian # Note taking app
     ollama # LLM inference engine
-    via # Keyboard configurator
   ];
 }
