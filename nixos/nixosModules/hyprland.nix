@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   # Enable xserver
@@ -8,6 +8,14 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+  };
+
+  # XDG desktop portals
+  xdg.portal = {
+    enable = true;
+    extraPortals = lib.mkForce [
+      pkgs.xdg-desktop-portal-gtk
+    ];
   };
 
   # Enable polkit
