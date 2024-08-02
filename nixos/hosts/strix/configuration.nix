@@ -26,7 +26,7 @@
       firefox
       epiphany
       chromium
-      qutebrowser
+      (qutebrowser.override { enableWideVine = true; })
       spotify
     ];
     shell = pkgs.zsh;
