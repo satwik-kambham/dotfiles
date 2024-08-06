@@ -21,6 +21,9 @@
   # Enable polkit
   security.polkit.enable = true;
 
+  # Enable gnome keyring with gdm
+  security.pam.services.gdm-password.enableGnomeKeyring = true;
+
   # Hyprland electron fix
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
