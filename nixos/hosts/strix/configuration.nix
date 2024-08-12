@@ -28,6 +28,7 @@
       chromium
       (qutebrowser.override { enableWideVine = true; })
       spotify
+      discord
     ];
     shell = pkgs.zsh;
   };
