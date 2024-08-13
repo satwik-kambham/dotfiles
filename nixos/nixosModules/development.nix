@@ -12,6 +12,7 @@
         hash = "sha256-dyN0RN4vswDSa2U3udhu0GsC/KVLLjAkbhK3R2z8ZHk=";
       };
     })
+    emacs
 
     git
     difftastic
@@ -22,6 +23,7 @@
     gnumake
     ripgrep
     fd
+    fzf
     tmux
     zellij
     eza
@@ -31,7 +33,14 @@
     podman-tui
     pods
     nil
+    clang
+    cmake
+    libtool
   ];
+
+  services.emacs = {
+    enable = true;
+  };
 
   # Containerization
   virtualisation.podman = {
@@ -198,6 +207,8 @@
       gp = "git push";
       gc = "git commit -m";
     };
+
+    shellInit = "export PATH=$PATH:~/.config/emacs/bin";
 
     histSize = 10000;
 
