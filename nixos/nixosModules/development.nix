@@ -31,7 +31,6 @@
     bat
     nvidia-podman
     podman-tui
-    pods
     nil
     clang
     cmake
