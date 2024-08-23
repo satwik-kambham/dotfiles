@@ -9,5 +9,8 @@
     ollama # LLM inference engine
     maestral
     maestral-gui
+    zathura
   ];
+
+  nixpkgs.config.zathura.useMupdf = true;
 }
