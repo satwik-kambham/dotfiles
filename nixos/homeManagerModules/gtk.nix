@@ -15,7 +15,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Kanagawa-B";
+      name = "Kanagawa-BL";
       package = pkgs.kanagawa-gtk-theme;
     };
     gtk3.extraConfig = {
