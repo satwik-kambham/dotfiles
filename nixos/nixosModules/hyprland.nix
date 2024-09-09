@@ -13,9 +13,9 @@
   # XDG desktop portals
   xdg.portal = {
     enable = true;
-    extraPortals = lib.mkForce [
-      pkgs.xdg-desktop-portal-gtk
-    ];
+    # extraPortals = lib.mkForce [
+    #   pkgs.xdg-desktop-portal-gtk
+    # ];
   };
 
   # Enable polkit

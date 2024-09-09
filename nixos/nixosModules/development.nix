@@ -29,7 +29,6 @@
     eza
     zoxide
     bat
-    nvidia-podman
     podman-tui
     nil
     clang
