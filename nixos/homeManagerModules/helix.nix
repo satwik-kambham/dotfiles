@@ -21,6 +21,10 @@
         language-servers = [ "vscode-css-language-server" "tailwindcss-ls" ];
       }
       {
+        name = "vue";
+        language-servers = [ "vue-language-server" "tailwindcss-ls" ];
+      }
+      {
         name = "tsx";
         language-servers = [ "typescript-language-server" "tailwindcss-ls" ];
       }

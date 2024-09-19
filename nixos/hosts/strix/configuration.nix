@@ -23,7 +23,7 @@
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
+      firefox-bin
       epiphany
       chromium
       (qutebrowser.override { enableWideVine = true; })
