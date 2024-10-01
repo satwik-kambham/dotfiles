@@ -32,6 +32,9 @@
         name = "jsx";
         language-servers = [ "typescript-language-server" "tailwindcss-ls" ];
       }];
+    languages.language-server.rust-analyzer.config = {
+      check.command = "clippy";
+    };
     themes.catppuccin_mocha_transparent = {
       inherits = "catppuccin_mocha";
       "ui.background" = { };
