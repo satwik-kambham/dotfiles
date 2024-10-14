@@ -34,6 +34,7 @@
     clang
     cmake
     libtool
+    nodejs_22
   ];
 
   services.emacs = {
