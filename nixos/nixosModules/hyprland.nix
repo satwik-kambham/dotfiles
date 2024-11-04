@@ -30,6 +30,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    (import ./scripts/hyprmonitor.nix { inherit pkgs; })
     # Terminal Emulators
     alacritty
     kitty
