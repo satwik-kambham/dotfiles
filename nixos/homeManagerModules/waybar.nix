@@ -10,7 +10,7 @@
         margin = "5px";
         spacing = 10;
         modules-left = [
-          "hyprland/workspaces"
+          # "hyprland/workspaces"
           "wlr/taskbar"
           "cpu"
           "memory"
