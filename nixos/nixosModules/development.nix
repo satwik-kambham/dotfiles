@@ -146,7 +146,6 @@
       fontconfig
       freetype
       dbus
-      alsaLib
       expat
       # Needed for electron
       libdrm
