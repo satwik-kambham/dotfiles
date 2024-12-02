@@ -10,7 +10,7 @@
         margin = "5px";
         spacing = 10;
         modules-left = [
-          # "hyprland/workspaces"
+          "hyprland/workspaces"
           "wlr/taskbar"
           "cpu"
           "memory"
@@ -31,11 +31,11 @@
         ];
         "hyprland/workspaces" = {
           # "format" = "{name}: {icon}";
-          "format" = "{icon}";
-          "format-icons" = {
-            "active" = "";
-            "default" = "";
-          };
+          # "format" = "{icon}";
+          # "format-icons" = {
+          #   "active" = "";
+          #   "default" = "";
+          # };
           "persistent-workspaces" = {
             "1" = [ ];
             "2" = [ ];
