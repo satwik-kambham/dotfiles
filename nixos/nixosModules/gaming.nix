@@ -13,5 +13,6 @@
     heroic
     (import ./scripts/hyprgame.nix { inherit pkgs; })
     gamescope
+    protonup-qt
   ];
 }
