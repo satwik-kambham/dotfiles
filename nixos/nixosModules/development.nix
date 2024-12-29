@@ -5,13 +5,13 @@
     # Text Editors
     helix
     vscode
-    (appimageTools.wrapType2 {
-      name = "papyrus";
-      src = fetchurl {
-        url = "https://github.com/satwik-kambham/papyrus/releases/download/app-v0.0.0/papyrus_0.1.0_amd64.AppImage";
-        hash = "sha256-dyN0RN4vswDSa2U3udhu0GsC/KVLLjAkbhK3R2z8ZHk=";
-      };
-    })
+    # (appimageTools.wrapType2 {
+    #   name = "papyrus";
+    #   src = fetchurl {
+    #     url = "https://github.com/satwik-kambham/papyrus/releases/download/app-v0.0.0/papyrus_0.1.0_amd64.AppImage";
+    #     hash = "sha256-dyN0RN4vswDSa2U3udhu0GsC/KVLLjAkbhK3R2z8ZHk=";
+    #   };
+    # })
     emacs
 
     git
@@ -139,7 +139,6 @@
       librsvg
       xorg.libXft
       libvdpau
-      gnome2.pango
       cairo
       atk
       gdk-pixbuf
@@ -179,7 +178,7 @@
 
   # Fonts
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    nerd-fonts.fira-code
     monaspace
     vistafonts
     inter
