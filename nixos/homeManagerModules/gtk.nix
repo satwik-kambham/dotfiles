@@ -15,8 +15,10 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Kanagawa-BL";
-      package = pkgs.kanagawa-gtk-theme;
+      name = "Colloid-Dark-Gruvbox";
+      package = pkgs.colloid-gtk-theme.override {
+        tweaks = [ "gruvbox" ];
+      };
     };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;
@@ -33,8 +35,8 @@
   # Cursor theme
   home.pointerCursor = {
     gtk.enable = true;
-    package = pkgs.catppuccin-cursors.mochaDark;
-    name = "catppuccin-mocha-dark-cursors";
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
     size = 18;
   };
 

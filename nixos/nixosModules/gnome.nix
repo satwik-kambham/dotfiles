@@ -7,5 +7,8 @@
   environment.systemPackages = with pkgs; [
     gnomeExtensions.forge
     gnomeExtensions.clipboard-history
+    gnomeExtensions.appindicator
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.pop-shell
   ];
 }
