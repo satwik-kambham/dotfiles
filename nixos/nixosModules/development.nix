@@ -4,15 +4,6 @@
   environment.systemPackages = with pkgs; [
     # Text Editors
     helix
-    vscode
-    # (appimageTools.wrapType2 {
-    #   name = "papyrus";
-    #   src = fetchurl {
-    #     url = "https://github.com/satwik-kambham/papyrus/releases/download/app-v0.0.0/papyrus_0.1.0_amd64.AppImage";
-    #     hash = "sha256-dyN0RN4vswDSa2U3udhu0GsC/KVLLjAkbhK3R2z8ZHk=";
-    #   };
-    # })
-    emacs
 
     git
     difftastic
@@ -36,10 +27,6 @@
     libtool
     nodejs_22
   ];
-
-  services.emacs = {
-    enable = false;
-  };
 
   # Containerization
   virtualisation.podman = {
@@ -202,18 +189,11 @@
       gdc = "git diff --cached";
       ga = "git add .";
       gp = "git push";
+      gpu = "git pull";
       gc = "git commit -m";
     };
 
-    shellInit = "export PATH=$PATH:~/.config/emacs/bin";
-
     histSize = 10000;
-
-    # ohMyZsh = {
-    #   enable = true;
-    #   plugins = [ "git" ];
-    #   theme = "robbyrussell";
-    # };
   };
 
   programs.starship = {
