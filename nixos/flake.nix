@@ -6,10 +6,7 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.11";
 
     # Home Manager
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    home-manager.url = "github:nix-community/home-manager?ref=release-24.11";
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
