@@ -6,7 +6,7 @@
     ncdu # Disk space analyser
     evince # PDF reader
     obsidian # Note taking app
-    ollama # LLM inference engine
+    ollama-cuda # LLM inference engine
     maestral
     maestral-gui
     zathura
