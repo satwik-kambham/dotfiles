@@ -1,16 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # Dark Mode
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-    };
-    "org/gnome/desktop/wm/preferences" = {
-      button-layout = ":minimize,maximize,close";
-    };
-  };
-
   # GTK
   gtk = {
     enable = true;
@@ -29,6 +19,19 @@
     iconTheme = {
       name = "Adwaita";
       package = pkgs.adwaita-icon-theme;
+    };
+  };
+
+  # Dark Mode
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+    "org/gnome/desktop/wm/preferences" = {
+      button-layout = ":minimize,maximize,close";
+    };
+    "org/gnome/desktop/interface" = {
+      cursor-theme = "Bibata-Modern-Classic";
     };
   };
 
