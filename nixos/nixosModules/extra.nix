@@ -10,6 +10,7 @@
     maestral
     maestral-gui
     zathura
+    gparted
   ];
 
   nixpkgs.config.zathura.useMupdf = true;

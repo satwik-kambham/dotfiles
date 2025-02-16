@@ -6,7 +6,7 @@
     enable = true;
     settings = {
       font = {
-        size = 18;
+        size = 14;
         normal.family = "Monaspace Neon";
       };
       window = {
