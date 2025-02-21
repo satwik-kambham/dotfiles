@@ -25,7 +25,6 @@
     clang
     cmake
     libtool
-    nodejs_22
   ];
 
   # Containerization
