@@ -11,7 +11,6 @@
     ../../nixosModules/flatpak.nix
     ../../nixosModules/gaming.nix
     ../../nixosModules/gnome.nix
-    ../../nixosModules/awesome.nix
     ../../nixosModules/hyprland.nix
     ../../nixosModules/nvidia.nix
     ../../nixosModules/virtualization.nix
@@ -25,10 +24,8 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox-bin
-      epiphany
       chromium
       (qutebrowser.override { enableWideVine = true; })
-      spotify
       discord
     ];
     shell = pkgs.zsh;

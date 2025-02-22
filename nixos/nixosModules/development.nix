@@ -22,9 +22,6 @@
     bat
     podman-tui
     nil
-    clang
-    cmake
-    libtool
   ];
 
   # Containerization

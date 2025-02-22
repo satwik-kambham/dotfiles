@@ -33,8 +33,6 @@
     (import ./scripts/hyprmonitor.nix { inherit pkgs; })
     # Terminal Emulators
     alacritty
-    kitty
-    foot
 
     waybar # Status Bar
     eww # Status Bar
