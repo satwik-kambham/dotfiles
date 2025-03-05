@@ -21,6 +21,7 @@
     zoxide
     bat
     podman-tui
+    distrobox
     nil
   ];
 
