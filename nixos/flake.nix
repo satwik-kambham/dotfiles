@@ -8,9 +8,12 @@
 
     # Home Manager
     home-manager.url = "github:nix-community/home-manager?ref=release-24.11";
+
+    # Rift editor
+    rift.url = "github:satwik-kambham/rift";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, rift, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -20,12 +23,13 @@
           allowUnfree = true;
         };
       };
+      rift_pkgs = rift.packages.${system};
     in
     {
       formatter.${system} = pkgs.nixpkgs-fmt;
       nixosConfigurations = {
         strix = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs pkgs-unstable; };
+          specialArgs = { inherit inputs pkgs-unstable rift_pkgs; };
           modules = [
             ./hosts/strix/configuration.nix
           ];
