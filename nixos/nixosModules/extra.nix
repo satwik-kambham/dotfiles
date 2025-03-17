@@ -2,7 +2,9 @@
 
 {
   environment.systemPackages = (with pkgs; [
-    btop # System monitor
+    (btop.override {
+      cudaSupport = true;
+    })
     ncdu # Disk space analyser
     evince # PDF reader
     maestral
