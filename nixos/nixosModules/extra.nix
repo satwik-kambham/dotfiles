@@ -7,7 +7,7 @@
     evince # PDF reader
     maestral
     maestral-gui
-    gparted
+    obsidian
   ]) ++ (with pkgs-unstable; [
     ollama-cuda
   ]);
