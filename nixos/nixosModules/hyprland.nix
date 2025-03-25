@@ -50,5 +50,6 @@
     lxqt.lxqt-policykit # Auth agent
     hyprlock # Screen Lock
     grimblast # Screnshot Tool
+    socat
   ];
 }

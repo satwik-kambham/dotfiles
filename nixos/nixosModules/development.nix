@@ -17,6 +17,7 @@
     ripgrep
     fd
     fzf
+    jq
     tmux
     zellij
     eza
@@ -168,6 +169,7 @@
     monaspace
     vistafonts
     inter
+    roboto
   ];
 
   # ZSH config
