@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, rift_pkgs, ... }:
 
 {
   imports = [
@@ -17,6 +17,9 @@
 
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
+    rift_pkgs.rift_egui
+    rift_pkgs.rift_tui
+
     curl
     wget
     coreutils

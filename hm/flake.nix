@@ -7,14 +7,19 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Rift editor
+    rift.url = "github:satwik-kambham/rift";
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, rift, ... }:
     let
-      pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
+      system = "x86_64-linux";
+      pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+      rift_pkgs = rift.packages.${system};
     in {
       homeConfigurations."satwik" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+        inherit pkgs rift_pkgs;
 
         modules = [ ./home.nix ];
       };
