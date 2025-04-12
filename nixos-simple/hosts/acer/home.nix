@@ -9,6 +9,7 @@
     ../../homeManagerModules/git.nix
     ../../homeManagerModules/tmux.nix
     ../../homeManagerModules/zoxide.nix
+    ../../homeManagerModules/rift.nix
   ];
 
   home.username = "raghava";

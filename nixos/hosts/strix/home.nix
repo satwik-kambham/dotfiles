@@ -15,6 +15,7 @@
     ../../homeManagerModules/zellij.nix
     ../../homeManagerModules/zoxide.nix
     ../../homeManagerModules/rofi.nix
+    ../../homeManagerModules/rift.nix
   ];
 
   home.username = "satwik";
