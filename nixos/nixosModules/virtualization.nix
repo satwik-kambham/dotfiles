@@ -9,5 +9,9 @@
     distrobox
   ];
   virtualisation.libvirtd.enable = true;
-  users.users.satwik.extraGroups = [ "libvirtd" ];
+  # users.users.satwik.extraGroups = [ "libvirtd" ];
+  
+  # Android Stuff
+  programs.adb.enable = true;
+  users.users.satwik.extraGroups = [ "kvm" "adbusers" "libvirtd" ];
 }
