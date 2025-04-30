@@ -11,6 +11,6 @@
     maestral-gui
     obsidian
   ]) ++ (with pkgs-unstable; [
-    ollama-cuda
+    # ollama-cuda
   ]);
 }
