@@ -10,7 +10,9 @@
     maestral
     maestral-gui
     obsidian
+    vlc
   ]) ++ (with pkgs-unstable; [
-    # ollama-cuda
+    ollama-cuda
+    lmstudio
   ]);
 }
