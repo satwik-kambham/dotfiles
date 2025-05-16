@@ -7,6 +7,7 @@
 
   # Networking
   networking.networkmanager.enable = true;
+  networking.firewall.allowedTCPPorts = [ 4123 ];
 
   # Time Zone
   time.timeZone = "US/Central";

@@ -4,8 +4,8 @@
   environment.systemPackages = with pkgs; [
     # Text Editors
     helix
-    rift_pkgs.rift_egui
-    rift_pkgs.rift_tui
+    # rift_pkgs.rift_egui
+    # rift_pkgs.rift_tui
 
     git
     difftastic
