@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, enableExtra, lib, ... }:
 
 {
   imports = [
@@ -9,12 +9,13 @@
     ../../nixosModules/development.nix
     ../../nixosModules/cachix.nix
     ../../nixosModules/flatpak.nix
-    ../../nixosModules/gaming.nix
     ../../nixosModules/gnome.nix
     ../../nixosModules/hyprland.nix
-    ../../nixosModules/nvidia.nix
     ../../nixosModules/virtualization.nix
     inputs.home-manager.nixosModules.default
+  ] ++ lib.optionals enableExtra [
+    ../../nixosModules/nvidia.nix
+    ../../nixosModules/gaming.nix
   ];
 
   # Defining user accounts. Don't forget to set a password with 'passwd'.
@@ -33,28 +34,9 @@
 
   # Home Manager
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = { inherit inputs enableExtra; };
     users = {
       "satwik" = import ./home.nix;
-    };
-  };
-
-  # Asusd
-  programs.rog-control-center.enable = true;
-  services.asusd = {
-    enable = true;
-    enableUserService = true;
-  };
-
-  # Nvidia Prime
-  hardware.nvidia = {
-    prime = {
-      intelBusId = "PCI:0:2:0";
-      nvidiaBusId = "PCI:1:0:0";
-      offload = {
-        enable = true;
-        enableOffloadCmd = true;
-      };
     };
   };
 

@@ -12,7 +12,7 @@
     obsidian
     vlc
   ]) ++ (with pkgs-unstable; [
-    ollama-cuda
-    lmstudio
+    ollama
+    llama-cpp
   ]);
 }

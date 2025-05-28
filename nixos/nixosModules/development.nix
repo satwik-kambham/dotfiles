@@ -33,7 +33,6 @@
     enable = true;
     dockerCompat = true;
   };
-  hardware.nvidia-container-toolkit.enable = true;
 
   # direnv
   programs.direnv = {
@@ -165,7 +164,7 @@
 
   # Fonts
   fonts.packages = with pkgs; [
-    fira-code-nerdfont
+    nerd-fonts.fira-code
     monaspace
     vistafonts
     inter

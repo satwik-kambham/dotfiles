@@ -15,4 +15,25 @@
     open = false;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
+
+  # Asusd
+  programs.rog-control-center.enable = true;
+  services.asusd = {
+    enable = true;
+    enableUserService = true;
+  };
+
+  # Nvidia Prime
+  hardware.nvidia = {
+    prime = {
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+    };
+  };
+
+  hardware.nvidia-container-toolkit.enable = true;
 }
