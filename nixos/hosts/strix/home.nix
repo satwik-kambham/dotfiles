@@ -14,7 +14,7 @@
     ../../homeManagerModules/rift.nix
     ../../homeManagerModules/gtk.nix
     ../../homeManagerModules/qt.nix
-    ../../homeManagerModules/hyprland.nix
+    # ../../homeManagerModules/hyprland.nix
     ../../homeManagerModules/rofi.nix
     ../../homeManagerModules/waybar.nix
   ];

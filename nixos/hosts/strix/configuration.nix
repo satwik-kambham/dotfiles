@@ -10,7 +10,7 @@
     ../../nixosModules/cachix.nix
     ../../nixosModules/flatpak.nix
     ../../nixosModules/gnome.nix
-    ../../nixosModules/hyprland.nix
+    # ../../nixosModules/hyprland.nix
     ../../nixosModules/niri.nix
     ../../nixosModules/virtualization.nix
     inputs.home-manager.nixosModules.default
