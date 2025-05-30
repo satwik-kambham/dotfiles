@@ -10,7 +10,6 @@
         margin = "5px";
         spacing = 10;
         modules-left = [
-          "hyprland/workspaces"
           "wlr/taskbar"
           "cpu"
           "memory"
@@ -29,20 +28,6 @@
           "custom/reboot"
           "custom/poweroff"
         ];
-        "hyprland/workspaces" = {
-          # "format" = "{name}: {icon}";
-          # "format" = "{icon}";
-          # "format-icons" = {
-          #   "active" = "";
-          #   "default" = "";
-          # };
-          "persistent-workspaces" = {
-            "1" = [ ];
-            "2" = [ ];
-            "3" = [ ];
-            "4" = [ ];
-          };
-        };
         "wlr/taskbar" = {
           on-click = "activate";
           format = "{icon}";
@@ -117,7 +102,7 @@
           on-click = "systemctl reboot";
         };
         "custom/poweroff" = {
-          format = "⏻";
+          format = "";
           on-click = "systemctl poweroff";
         };
       };
