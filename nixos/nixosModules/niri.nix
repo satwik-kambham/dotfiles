@@ -29,5 +29,6 @@
     sushi # File Previewer
     lxqt.lxqt-policykit # Auth agent
     socat
+    xwayland-satellite
   ];
 }

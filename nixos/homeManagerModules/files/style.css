@@ -41,7 +41,7 @@
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Inter;
+    font-family: "Adwaita Sans", Inter;
     min-height: 20px;
 }
 
