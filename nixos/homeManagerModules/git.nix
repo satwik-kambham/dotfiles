@@ -21,6 +21,6 @@
 
   # Difftastic
   programs.git.difftastic = {
-    enable = true;
+    enable = false;
   };
 }

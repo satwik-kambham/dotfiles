@@ -170,6 +170,7 @@
     vistafonts
     inter
     roboto
+    open-sans
   ];
 
   # ZSH config
@@ -186,8 +187,8 @@
       lt = "li -T";
       shx = "sudo hx";
       gs = "git status";
-      gd = "git diff";
-      gdc = "git diff --cached";
+      gd = "git -c diff.external=difft diff";
+      gdc = "git -c diff.external=difft diff --cached";
       ga = "git add .";
       gp = "git push";
       gpu = "git pull";
