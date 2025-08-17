@@ -14,5 +14,7 @@
     (import ./scripts/hyprgame.nix { inherit pkgs; })
     gamescope
     protonup-qt
+    mangohud
+    gamemode
   ];
 }
