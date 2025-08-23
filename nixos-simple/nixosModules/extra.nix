@@ -5,5 +5,7 @@
     btop # System monitor
     evince # PDF reader
     ollama
+    thunderbird
+    libreoffice
   ];
 }
