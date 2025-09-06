@@ -9,11 +9,14 @@
     # Home Manager
     home-manager.url = "github:nix-community/home-manager?ref=release-25.05";
 
+    # NixOS Hardware
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
     # Rift editor
     rift.url = "github:satwik-kambham/rift";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, rift, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nixos-hardware, rift, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -33,6 +36,14 @@
           specialArgs = { inherit inputs pkgs-unstable rift_pkgs enableExtra; };
           modules = [
             ./hosts/strix/configuration.nix
+          ];
+        };
+
+        rpi = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs pkgs-unstable rift_pkgs; };
+          modules = [
+            ./hosts/rpi/configuration.nix
+            nixos-hardware.nixosModules.raspberry-pi-4
           ];
         };
       };
