@@ -7,7 +7,7 @@
       mainBar = {
         layer = "top";
         position = "top";
-        margin = "5px";
+        # margin = "5px";
         spacing = 10;
         modules-left = [
           "wlr/taskbar"
