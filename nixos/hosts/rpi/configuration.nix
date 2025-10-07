@@ -5,7 +5,7 @@
     [
       ./hardware-configuration.nix
       ../../nixosModules/cachix.nix
-      ../../nixosModules/flatpak.nix
+      # ../../nixosModules/flatpak.nix
       inputs.home-manager.nixosModules.default
     ];
 
@@ -21,11 +21,11 @@
 
   i18n.defaultLocale = "en_US.UTF-8";
 
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
   # services.xserver.displayManager.gdm.enable = true;
   # services.xserver.desktopManager.gnome.enable = true;
 
-  programs.niri.enable = true;
+  # programs.niri.enable = true;
 
   # Enable polkit
   # security.polkit.enable = true;
