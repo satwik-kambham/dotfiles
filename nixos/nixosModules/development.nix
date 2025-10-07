@@ -1,11 +1,13 @@
-{ pkgs, rift_pkgs, ... }:
+{ pkgs, pkgs-unstable, rift_pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = (with pkgs; [
     # Text Editors
     helix
     rift_pkgs.rift_egui
     rift_pkgs.rift_tui
+    emacs
+    neovim
 
     git
     difftastic
@@ -26,7 +28,9 @@
     podman-tui
     distrobox
     nil
-  ];
+  ]) ++ (with pkgs-unstable; [
+    vscode-fhs
+  ]);
 
   # Containerization
   virtualisation.podman = {

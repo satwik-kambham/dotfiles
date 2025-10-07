@@ -7,7 +7,8 @@
 
   # Networking
   networking.networkmanager.enable = true;
-  networking.firewall.allowedTCPPorts = [ 4123 ];
+  networking.firewall.allowedTCPPorts = [ 4123 8080 ];
+  services.openssh.enable = true;
 
   # Time Zone
   time.timeZone = "Asia/Kolkata";
