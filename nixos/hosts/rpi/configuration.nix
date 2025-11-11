@@ -129,6 +129,8 @@
 
   programs.direnv.enable = true;
 
+  programs.nix-ld.enable = true;
+
   fonts.packages = with pkgs; [
     monaspace
     inter
@@ -167,7 +169,7 @@
   services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 8080 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
 
   system.stateVersion = "25.05";
