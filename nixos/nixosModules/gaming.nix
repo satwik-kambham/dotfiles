@@ -9,7 +9,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    lutris
+    # lutris
     # heroic
     (import ./scripts/hyprgame.nix { inherit pkgs; })
     gamescope
