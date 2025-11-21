@@ -36,9 +36,9 @@
     obsidian
     vlc
   ]) ++ (with pkgs-unstable; [
-    (ollama.override {
-      acceleration = "cuda";
-    })
+    # (ollama.override {
+    #   acceleration = "cuda";
+    # })
     (llama-cpp.override {
       cudaSupport = true;
     })
