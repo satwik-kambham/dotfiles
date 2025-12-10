@@ -29,7 +29,7 @@
     distrobox
     nil
   ]) ++ (with pkgs-unstable; [
-    vscode-fhs
+    # vscode-fhs
   ]);
 
   # Containerization
@@ -171,7 +171,7 @@
     nerd-fonts.fira-code
     adwaita-fonts
     monaspace
-    vistafonts
+    vista-fonts
     inter
     roboto
     open-sans

@@ -39,8 +39,6 @@
     # (ollama.override {
     #   acceleration = "cuda";
     # })
-    (llama-cpp.override {
-      cudaSupport = true;
-    })
+    llama-cpp-vulkan
   ]);
 }

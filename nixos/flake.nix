@@ -2,12 +2,12 @@
   description = "My NixOS configuration";
 
   inputs = {
-    # NixOS 25.05
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05";
+    # NixOS 25.11
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
     # Home Manager
-    home-manager.url = "github:nix-community/home-manager?ref=release-25.05";
+    home-manager.url = "github:nix-community/home-manager?ref=release-25.11";
 
     # NixOS Hardware
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
