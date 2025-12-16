@@ -78,8 +78,6 @@
   programs.zsh.shellAliases = {
     update = "sudo nixos-rebuild switch --flake .#rpi";
     update-safe = "sudo nixos-rebuild boot --flake .#rpi";
-    rt = "rift_tui";
-    re = "rift_egui &";
   };
 
   environment.systemPackages = with pkgs; [

@@ -48,8 +48,6 @@
   programs.zsh.shellAliases = {
     update = "sudo nixos-rebuild switch --flake .#strix";
     update-safe = "sudo nixos-rebuild boot --flake .#strix";
-    rt = "rift_tui";
-    re = "rift_egui &";
   };
 
   # Networking hostname

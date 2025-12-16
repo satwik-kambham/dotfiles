@@ -13,6 +13,7 @@
   environment.systemPackages = with pkgs; [
     # Terminal Emulators
     alacritty
+    ghostty
 
     waybar # Status Bar
     eww # Status Bar
