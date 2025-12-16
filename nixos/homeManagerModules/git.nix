@@ -5,10 +5,10 @@
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
-    userName = "Satwik Kambham";
-    userEmail = "satwik.kambham@gmail.com";
     lfs.enable = true;
-    extraConfig = {
+    settings = {
+      user.name = "Satwik Kambham";
+      user.email = "satwik.kambham@gmail.com";
       init.defaultBranch = "main";
       http.postBuffer = 524288000;
     };
@@ -20,7 +20,7 @@
   };
 
   # Difftastic
-  programs.git.difftastic = {
+  programs.difftastic = {
     enable = false;
   };
 }
