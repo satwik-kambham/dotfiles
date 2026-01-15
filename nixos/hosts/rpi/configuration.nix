@@ -160,6 +160,11 @@
     histSize = 10000;
   };
 
+  # Environment Variables
+  environment.variables = {
+      EDITOR = "rt";
+  };
+
   programs.starship = {
     enable = true;
   };

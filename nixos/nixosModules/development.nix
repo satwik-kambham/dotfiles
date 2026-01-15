@@ -8,6 +8,7 @@
     rift_pkgs.rift_tui
     emacs
     neovim
+    zed-editor
 
     git
     difftastic

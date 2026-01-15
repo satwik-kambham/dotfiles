@@ -50,6 +50,11 @@
     update-safe = "sudo nixos-rebuild boot --flake .#strix";
   };
 
+  # Environment Variables
+  environment.variables = {
+      EDITOR = "rt";
+  };
+
   # Networking hostname
   networking.hostName = "satwik-strix";
 }
