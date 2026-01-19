@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, rift_pkgs, ... }:
 
 {
   imports =
@@ -61,7 +61,7 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     packages = with pkgs; [
-      firefox-bin
+      # firefox-bin
     ];
     shell = pkgs.zsh;
   };
@@ -87,7 +87,7 @@
     
     helix
     # rift_pkgs.rift_egui
-    # rift_pkgs.rift_tui
+    rift_pkgs.rift_tui
 
     git
     difftastic

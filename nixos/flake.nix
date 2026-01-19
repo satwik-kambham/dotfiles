@@ -18,29 +18,44 @@
 
   outputs = { self, nixpkgs, nixpkgs-unstable, nixos-hardware, rift, ... }@inputs:
     let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-      pkgs-unstable = import nixpkgs-unstable {
-        inherit system;
-        config = {
-          allowUnfree = true;
-        };
-      };
-      rift_pkgs = rift.packages.${system};
       enableExtra = true;
+      hostSystems = {
+        strix = "x86_64-linux";
+        rpi = "aarch64-linux";
+      };
+      mkPkgsUnstable = system:
+        import nixpkgs-unstable {
+          inherit system;
+          config = {
+            allowUnfree = true;
+          };
+        };
+      mkRiftPkgs = system: rift.packages.${system};
+      mkHost = { system, modules, extraSpecialArgs ? { } }:
+        nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = {
+            inherit inputs enableExtra;
+            pkgs-unstable = mkPkgsUnstable system;
+            rift_pkgs = mkRiftPkgs system;
+          } // extraSpecialArgs;
+          inherit modules;
+        };
     in
     {
-      formatter.${system} = pkgs.nixpkgs-fmt;
+      formatter = nixpkgs.lib.genAttrs
+        (builtins.attrValues hostSystems)
+        (system: (nixpkgs.legacyPackages.${system}).nixpkgs-fmt);
       nixosConfigurations = {
-        strix = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs pkgs-unstable rift_pkgs enableExtra; };
+        strix = mkHost {
+          system = hostSystems.strix;
           modules = [
             ./hosts/strix/configuration.nix
           ];
         };
 
-        rpi = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs pkgs-unstable rift_pkgs; };
+        rpi = mkHost {
+          system = hostSystems.rpi;
           modules = [
             ./hosts/rpi/configuration.nix
             nixos-hardware.nixosModules.raspberry-pi-4
