@@ -14,9 +14,12 @@
 
     # Rift editor
     rift.url = "github:satwik-kambham/rift";
+
+    # Llama cpp
+    llama-cpp.url = "github:ggml-org/llama.cpp";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nixos-hardware, rift, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nixos-hardware, rift, llama-cpp, ... }@inputs:
     let
       enableExtra = true;
       hostSystems = {
@@ -31,6 +34,7 @@
           };
         };
       mkRiftPkgs = system: rift.packages.${system};
+      mkLlamacppPkgs = system: llama-cpp.packages.${system};
       mkHost = { system, modules, extraSpecialArgs ? { } }:
         nixpkgs.lib.nixosSystem {
           inherit system;
@@ -38,6 +42,7 @@
             inherit inputs enableExtra;
             pkgs-unstable = mkPkgsUnstable system;
             rift_pkgs = mkRiftPkgs system;
+            llamacpp_pkgs = mkLlamacppPkgs system;
           } // extraSpecialArgs;
           inherit modules;
         };

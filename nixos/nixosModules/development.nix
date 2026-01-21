@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, rift_pkgs, ... }:
+{ pkgs, pkgs-unstable, rift_pkgs, llamacpp_pkgs, ... }:
 
 {
   environment.systemPackages = (with pkgs; [
@@ -9,6 +9,8 @@
     emacs
     neovim
     zed-editor
+
+    llamacpp_pkgs.cuda
 
     git
     difftastic

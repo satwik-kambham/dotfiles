@@ -35,12 +35,13 @@
     maestral-gui
     obsidian
     vlc
+    pavucontrol
   ]) ++ (with pkgs-unstable; [
     # (ollama.override {
     #   acceleration = "cuda";
     # })
-    (llama-cpp.override {
-      cudaSupport = true;
-    })
+    # (llama-cpp.override {
+      # cudaSupport = true;
+    # })
   ]);
 }
