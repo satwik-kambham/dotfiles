@@ -31,9 +31,6 @@
     })
     ncdu # Disk space analyser
     evince # PDF reader
-    maestral
-    maestral-gui
-    obsidian
     vlc
     pavucontrol
   ]) ++ (with pkgs-unstable; [
