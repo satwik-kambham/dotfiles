@@ -87,7 +87,7 @@
     
     helix
     # rift_pkgs.rift_egui
-    rift_pkgs.rift_tui
+    # rift_pkgs.rift_tui
 
     git
     difftastic
@@ -168,11 +168,16 @@
   programs.starship = {
     enable = true;
   };
+  
+  services.syncthing = {
+    enable = true;
+    openDefaultPorts = true;
+  };
 
   services.openssh.enable = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 8080 ];
+  networking.firewall.allowedTCPPorts = [ 8080 8384 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
 
   system.stateVersion = "25.05";
