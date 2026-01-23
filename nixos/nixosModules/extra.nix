@@ -1,11 +1,6 @@
 { pkgs, pkgs-unstable, ... }:
 
 {
-  services.syncthing = {
-    enable = true;
-    openDefaultPorts = true;
-  };
-
   # Plymouth
   boot = {
     # plymouth = {

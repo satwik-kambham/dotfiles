@@ -13,6 +13,7 @@
     # ../../nixosModules/hyprland.nix
     ../../nixosModules/niri.nix
     ../../nixosModules/virtualization.nix
+    ../../nixosModules/syncthing.nix
     inputs.home-manager.nixosModules.default
   ] ++ lib.optionals enableExtra [
     ../../nixosModules/nvidia.nix
