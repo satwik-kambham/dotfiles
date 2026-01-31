@@ -14,6 +14,8 @@
   boot.loader.generic-extlinux-compatible.enable = true;
 
   hardware.raspberry-pi."4".fkms-3d.enable = true;
+  
+  zramSwap.enable = true;
 
   networking.hostName = "satwik-rpi";
   networking.networkmanager.enable = true;
@@ -88,7 +90,7 @@
     
     helix
     # rift_pkgs.rift_egui
-    # rift_pkgs.rift_tui
+    rift_pkgs.rift_tui
 
     git
     difftastic
