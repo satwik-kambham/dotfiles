@@ -3,6 +3,12 @@
 {
   programs.niri.enable = true;
   programs.niri.package = pkgs-unstable.niri;
+  
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "catppuccin-mocha-mauve";
+    wayland.enable = true;
+  };
 
   # Enable polkit
   security.polkit.enable = true;
@@ -31,5 +37,12 @@
     lxqt.lxqt-policykit # Auth agent
     socat
     xwayland-satellite
+    
+    (catppuccin-sddm.override {
+      flavor = "mocha";
+      accent = "mauve";
+      font  = "Adwaita Sans";
+      fontSize = "12";
+    })
   ];
 }
