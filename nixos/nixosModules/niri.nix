@@ -1,6 +1,7 @@
 { pkgs, pkgs-unstable, ... }:
 
 {
+  services.xserver.enable = true;
   programs.niri.enable = true;
   programs.niri.package = pkgs-unstable.niri;
   

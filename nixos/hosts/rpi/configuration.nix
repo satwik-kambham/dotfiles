@@ -6,7 +6,7 @@
       ./hardware-configuration.nix
       ../../nixosModules/cachix.nix
       ../../nixosModules/syncthing.nix
-      # ../../nixosModules/flatpak.nix
+      ../../nixosModules/niri.nix
       inputs.home-manager.nixosModules.default
     ];
 
@@ -23,18 +23,6 @@
   time.timeZone = "Asia/Kolkata";
 
   i18n.defaultLocale = "en_US.UTF-8";
-
-  # services.xserver.enable = true;
-  # services.xserver.displayManager.gdm.enable = true;
-  # services.xserver.desktopManager.gnome.enable = true;
-
-  # programs.niri.enable = true;
-
-  # Enable polkit
-  # security.polkit.enable = true;
-
-  # Enable gnome keyring with gdm
-  # security.pam.services.gdm-password.enableGnomeKeyring = true;
 
   services.xserver.xkb.layout = "us";
 
@@ -58,13 +46,24 @@
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
+  hardware.raspberry-pi."4".bluetooth.enable = true;
+  systemd.services.btattach = {
+    before = [ "bluetooth.service" ];
+    after = [ "dev-ttyAMA0.device" ];
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      ExecStart = "${pkgs.bluez}/bin/btattach -B /dev/ttyAMA0 -P bcm -S 3000000";
+    };
+  };
+  services.blueman.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.satwik= {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     packages = with pkgs; [
-      # firefox-bin
+      firefox
+      epiphany
     ];
     shell = pkgs.zsh;
   };
