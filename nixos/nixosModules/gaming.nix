@@ -11,7 +11,7 @@
 
   environment.systemPackages = with pkgs; [
     # lutris
-    # heroic
+    heroic
     (import ./scripts/hyprgame.nix { inherit pkgs; })
     gamescope
     protonup-qt

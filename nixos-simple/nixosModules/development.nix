@@ -153,7 +153,7 @@
 
   # Fonts
   fonts.packages = with pkgs; [
-    fira-code-nerdfont
+    nerd-fonts.fira-code
     monaspace
     vistafonts
     inter
