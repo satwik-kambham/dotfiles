@@ -173,7 +173,7 @@
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
     adwaita-fonts
-    monaspace
+    nerd-fonts.monaspace
     vista-fonts
     inter
     roboto
